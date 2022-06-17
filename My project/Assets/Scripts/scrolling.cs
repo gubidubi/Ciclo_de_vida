@@ -15,6 +15,6 @@ public class scrolling : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        gameObject.transform.Translate(velocidade * Vector3.down * Time.deltaTime);
+        gameObject.transform.Translate(velocidade * Vector3.up * Time.deltaTime);
     }
 }
