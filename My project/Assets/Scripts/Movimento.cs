@@ -5,7 +5,7 @@ using UnityEngine;
 public class Movimento : MonoBehaviour
 {
     private Rigidbody2D rb;
-    public float velocidade = 0;
+    public float forca = 0;
     public float torque = 0;
 
     // Start is called before the first frame update
@@ -17,7 +17,7 @@ public class Movimento : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        rb.velocity = new Vector2(-Mathf.Sin(Mathf.Deg2Rad * rb.rotation), Mathf.Cos(Mathf.Deg2Rad * rb.rotation)) * velocidade;
+        rb.AddForce(transform.up * forca * Time.deltaTime);
 
         if (Input.GetKey(KeyCode.RightArrow)) {
             rb.AddTorque(-1*(torque) * Time.deltaTime);
