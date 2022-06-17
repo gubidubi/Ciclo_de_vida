@@ -17,7 +17,7 @@ public class Movimento : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        rb.velocity = Vector2.up * velocidade;
+        rb.velocity = new Vector2(-Mathf.Sin(Mathf.Deg2Rad * rb.rotation), Mathf.Cos(Mathf.Deg2Rad * rb.rotation)) * velocidade;
 
         if (Input.GetKey(KeyCode.RightArrow)) {
             rb.AddTorque(-1*(torque) * Time.deltaTime);
