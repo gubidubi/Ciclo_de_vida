@@ -1330,6 +1330,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2318887737190116935}
   - component: {fileID: 8462087289623493061}
+  - component: {fileID: 4073459756506841469}
   m_Layer: 0
   m_Name: Scripts
   m_TagString: Untagged
@@ -1381,9 +1382,9 @@ MonoBehaviour:
   - S
   allRankColors:
   - {r: 0.5254902, g: 0.39607847, b: 0.9450981, a: 1}
-  - {r: 0.37908882, g: 0.9811321, b: 0.2906372, a: 0}
-  - {r: 0.9622642, g: 0.17611244, b: 0.17611244, a: 0}
-  - {r: 0.9528302, g: 0.8986708, b: 0.17438585, a: 0}
+  - {r: 0.37908882, g: 0.9811321, b: 0.2906372, a: 1}
+  - {r: 0.9622642, g: 0.17611244, b: 0.17611244, a: 1}
+  - {r: 0.9528302, g: 0.8986708, b: 0.17438585, a: 1}
   allMessages:
   - "\"There\u2019s nothing wrong with having a tree as a friend.\" - Bob Ross"
   - '"Trees, trees, trees..." - idk'
@@ -1396,6 +1397,24 @@ MonoBehaviour:
   - What did the little tree say to the big tree? "Leaf me alone!"
   - "\"Venho do verde mais belo, Do mais dourado amarelo...\" - Expedicion\xE1rio"
   - '"Each time you get a C rank in this game, a tree dies..." - Devs'
+--- !u!114 &4073459756506841469
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8508919062793846578}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60746f82cb32ae24aab17c89c1db635f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  imagem: {fileID: 3896835573951996025}
+  mensagem: {fileID: 2332263710199548160}
+  rank: {fileID: 3714335713126665307}
+  "pontua\xE7\xE3o": {fileID: 745984262678878897}
+  rankThreshold: 3200000000000000c8000000000000005802000000000000e803000000000000
+  database: {fileID: 8462087289623493061}
 --- !u!1 &8610896140427603524
 GameObject:
   m_ObjectHideFlags: 0

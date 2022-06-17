@@ -7,8 +7,8 @@ public class GameOver : MonoBehaviour
     public Image imagem;
     public TextMeshProUGUI mensagem;
     public TextMeshProUGUI rank;
-    public TextMeshProUGUI pontuação;
-    public float tamanho;
+    public TextMeshProUGUI pontostxt;
+    private float tamanho;
     
 
     [Space]
@@ -19,12 +19,12 @@ public class GameOver : MonoBehaviour
     [Header("Others")]
     public GameOverDatabase database;
 
-    public void OnDeath(){ //rodar se o jogador morrer
+    public void OnDeath(int pontuacao){ //rodar se o jogador morrer
 
         //Rodar uma animação de aparecer a tela de game over
 
         imagem.GetComponent<RectTransform>().localScale = new Vector3(tamanho,tamanho,1f); //Reseta o tamanho da imagem
-        long pontos=0; //pontos vem aqui
+        int pontos=pontuacao; //pontos vem aqui
         int i;
         for (i = 0; i < 4; i++){
             if (pontos < rankThreshold[i]){
@@ -35,6 +35,8 @@ public class GameOver : MonoBehaviour
                     mensagem.text = database.ChooseRandomMessage();
                     rank.text = database.allRankTexts[i];
                     rank.color = database.allRankColors[i];
+                    pontostxt.text = pontos.ToString();
+                    break;
 
                 }
                 else{ //caso C
@@ -44,6 +46,8 @@ public class GameOver : MonoBehaviour
                     mensagem.text = database.ChooseRandomMessage();
                     rank.text = database.allRankTexts[0];
                     rank.color = database.allRankColors[0];
+                    pontostxt.text = pontos.ToString();
+                    break;
                 }
             }
         }
