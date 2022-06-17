@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Collections;
 using TMPro;
 using UnityEngine.UI;
 
@@ -8,6 +9,10 @@ public class GameOver : MonoBehaviour
     public TextMeshProUGUI mensagem;
     public TextMeshProUGUI rank;
     public TextMeshProUGUI pontostxt;
+    public TextMeshProUGUI uselessRanktxt;
+    public TextMeshProUGUI uselesPointtxt;
+    public GameObject botaoVerde;
+    public GameObject botaoVermelho;
     private float tamanho;
     
 
@@ -18,6 +23,7 @@ public class GameOver : MonoBehaviour
     [Space]
     [Header("Others")]
     public GameOverDatabase database;
+
 
     public void OnDeath(int pontuacao){ //rodar se o jogador morrer
 
@@ -51,5 +57,49 @@ public class GameOver : MonoBehaviour
                 }
             }
         }
+        StartCoroutine(GameOverSequence());
+    }
+
+    private IEnumerator GameOverSequence(){
+        HideComponents();
+        //Bring down the panel
+        yield return new WaitForSeconds(1);
+        // 1 - mostrar pontuação - FEITO
+        uselesPointtxt.enabled = true;
+        uselesPointtxt.gameObject.GetComponent<Animator>().SetTrigger("cair");
+        yield return new WaitForSeconds(1);
+        pontostxt.enabled = true;
+        pontostxt.gameObject.GetComponent<Animator>().SetTrigger("cair");
+        
+        // 2 - mostrar rank
+        yield return new WaitForSeconds(1);
+        uselessRanktxt.enabled = true;
+        uselessRanktxt.gameObject.GetComponent<Animator>().SetTrigger("cair");
+        yield return new WaitForSeconds(1.5f);
+        rank.enabled =  true;
+        rank.gameObject.GetComponent<Animator>().SetTrigger("cair");
+        yield return new WaitForSeconds(1);
+        // 3 - mostrar imagem
+        imagem.enabled=true;
+        imagem.gameObject.GetComponent<Animator>().SetTrigger("cair");
+        yield return new WaitForSeconds(1);
+        // 4 - mostrar mensagem
+        mensagem.gameObject.GetComponent<Animator>().SetTrigger("aparecer");
+        mensagem.enabled = true;
+        yield return new WaitForSeconds(2);
+        botaoVermelho.SetActive(true);
+        botaoVerde.SetActive(true);
+
+    }
+
+    public void HideComponents(){
+        mensagem.enabled = false;
+        imagem.enabled = false;
+        rank.enabled = false;
+        pontostxt.enabled = false;
+        uselessRanktxt.enabled = false;
+        uselesPointtxt.enabled = false;
+        botaoVermelho.SetActive(false);
+        botaoVerde.SetActive(false);
     }
 }
