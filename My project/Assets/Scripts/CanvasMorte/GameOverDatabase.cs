@@ -2,18 +2,10 @@ using UnityEngine;
 
 public class GameOverDatabase : MonoBehaviour
 {
-    public float imageSize;
-    public Sprite image;
-    public string rankText;
-    public Color rankColor;
-    public string message;
-    public GameOverDatabase(float a, Sprite b, string c, Color d, string e){
-        imageSize=a;
-        image=b;
-        rankText=c;
-        rankColor=d;
-        message=e;
-    }
+    public float[] allImageSizes;
+    public Sprite[] allImages;
+    public string[] allRankTexts;
+    public Color[] allRankColors;
 
     public void ApplyGameOverSettings(GameOverDatabase any){
         //Dps de linkar com os elementos de UI necessarios
@@ -25,4 +17,5 @@ public class GameOverDatabase : MonoBehaviour
     }
 
     public string[] allMessages;
+
 }
