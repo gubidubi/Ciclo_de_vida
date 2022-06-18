@@ -56,16 +56,18 @@ public class GameManager : MonoBehaviour
 
         //Ativar o sistema de spawn de inimigos e de galhos
 
-        //Tirar o texto dizendo "pressione a tecla E para crescer" com animação
+        yield return new WaitForSeconds(0.5f);
+        textoInicial.SetTrigger("sumir");
         yield return null;
     }
 
     private IEnumerator Morrer(){
         //Parar o spawn de inimigos
         player.forca = 0;
-        //Camera continua andando
-
-        //Desce a tela de game over
+        //esconder oq tava antes
+        gameOverScript.HideComponents();
+        yield return new WaitForSeconds(1f);
+        desceATela.SetTrigger("morreu");
         yield return new WaitForSeconds(1f);
         gameOverScript.OnDeath(pontuacao);
 
@@ -77,7 +79,7 @@ public class GameManager : MonoBehaviour
             Debug.Log("Jogador detectado fora dos limites. Morra imediatamente");
             morto = true;
         }
-        //Checar morte por outros meios tbm
+        //Checar morte por outros meios abaixo, se houver
 
         return morto;
     }
