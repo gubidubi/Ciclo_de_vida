@@ -1288,6 +1288,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 564278224}
   camera: {fileID: 2800846}
+  barra: {fileID: 905957192}
   gameOverScript: {fileID: 2034125959}
   desceATela: {fileID: 981161157}
   textoInicial: {fileID: 608924919}
@@ -1341,7 +1342,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   jogador: {fileID: 564278220}
   scaleInicial: {x: 0.95, y: 0.99, z: 1}
-  scaleBase: {x: 0, y: 0, z: 0}
 --- !u!212 &905957193
 SpriteRenderer:
   m_ObjectHideFlags: 0

@@ -27,4 +27,9 @@ public class Vida : MonoBehaviour
         if (vida > vidaMax) vida = vidaMax;
         if (vida < 0) vida = 0;
     }
+
+    public void Dano(float dano) {
+        vida -= dano;
+        if (vida < 0) vida = 0;
+    }
 }
