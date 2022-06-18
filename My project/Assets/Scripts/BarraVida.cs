@@ -8,19 +8,22 @@ public class BarraVida : MonoBehaviour
     public GameObject jogador;
     private float yMax;
     public Vector3 scaleInicial;
+    public Vector3 scaleBase;
     private float vidaMax;
+    private Vida vidaScript;
     // Start is called before the first frame update
     void Start()
     {
         yMax = scaleInicial.y;
-        scaleInicial = new Vector3(scaleInicial.x, 0, scaleInicial.z);
-        vidaMax = jogador.GetComponent<Vida>().vidaMax;
+        scaleBase = new Vector3(scaleInicial.x, 0, scaleInicial.z);
+        vidaScript = jogador.GetComponent<Vida>();
+        vidaMax = vidaScript.vidaMax;
     }
 
     // Update is called once per frame
     void Update()
     {
-        vida = jogador.GetComponent<Vida>().vida;
-        transform.localScale = scaleInicial + ((yMax * vida/vidaMax) * Vector3.up);
+        vida = vidaScript.vida;
+        transform.localScale = scaleBase + ((yMax * vida/vidaMax) * Vector3.up);
     }
 }
