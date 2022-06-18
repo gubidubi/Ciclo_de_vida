@@ -23,7 +23,7 @@ public class SpawnDeGalhos : MonoBehaviour
 
     public void SpawnSingleGalho(){
         //escolher posição -> y acima de onde a camera ta vendo (cam position + 5 + ...)
-        float y = Random.Range(camera.position.y + 5f, camera.position.y + 10f);
+        float y = Random.Range(camera.position.y + 5f, camera.position.y + 15f);
         float x = Random.Range(-9f, 9f);
         //escolher orientação
         float rotacao = Random.Range(0f, 360f);

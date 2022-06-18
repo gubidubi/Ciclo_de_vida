@@ -18,12 +18,13 @@ public class GameManager : MonoBehaviour
 
     [Header("Spawners")]
     public SpawnDeGalhos spawner;
+    public SpawnDeFolhas folhas;
 
     private bool comecou = false;
     private bool morreu = false;
 
     [HideInInspector]
-    public int pontuacao;
+    public int pontuacao; //poderá ser acessado pelo script de coletar folhas, pra aumentar a pontuação
     
     private void Start(){
         pontuacao = 0;
@@ -57,8 +58,9 @@ public class GameManager : MonoBehaviour
         camera.velocidade = cameraNormalSpeedAux;
         //Começar uma musiquinha tbm
 
-        //Ativar o sistema de spawn de inimigos e de galhos
+        //Ativar os sistemas de spawn
         spawner.enabled = true;
+        folhas.enabled = true;
 
         yield return new WaitForSeconds(0.5f);
         textoInicial.SetTrigger("sumir");
@@ -66,15 +68,19 @@ public class GameManager : MonoBehaviour
     }
 
     private IEnumerator Morrer(){
-        //Parar o spawn de inimigos
+        //Parar os spawners
         spawner.enabled = false;
+        folhas.enabled = false;
         //Parar o jogador
         player.forca = 0;
-        //esconder oq tava antes
+
+        //esconder oq tava antes na telinha de game over
         gameOverScript.HideComponents();
         yield return new WaitForSeconds(1f);
+        //Descer a tela
         desceATela.SetTrigger("morreu");
         yield return new WaitForSeconds(1f);
+        //Continua o processo de morte
         gameOverScript.OnDeath(pontuacao);
 
     }
