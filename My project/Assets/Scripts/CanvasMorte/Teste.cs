@@ -11,6 +11,5 @@ public class Teste : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Mouse0)){
             GameObject.Find("Scripts").GetComponent<GameOver>().OnDeath(points);
         }
-
     }
 }
