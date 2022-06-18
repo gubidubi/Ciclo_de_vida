@@ -6,6 +6,7 @@ public class GameManager : MonoBehaviour
     [Header("Componentes principais")]
     public Movimento player;
     public scrolling camera;
+    public BarraVida barra;
     private float playerNormalSpeedAux;
     private float cameraNormalSpeedAux;
     [Space]
@@ -61,6 +62,10 @@ public class GameManager : MonoBehaviour
         spawner.enabled = true;
         folhas.enabled = true;
 
+        //Ja pode perder vida
+        barra.enabled = true;
+        player.gameObject.GetComponent<Vida>().enabled = true;
+
         yield return new WaitForSeconds(0.5f);
         textoInicial.SetTrigger("sumir");
         yield return null;
@@ -70,8 +75,10 @@ public class GameManager : MonoBehaviour
         //Parar os spawners
         spawner.enabled = false;
         folhas.enabled = false;
-        //Parar o jogador
+        //Parar o jogador e sua vida
         player.forca = 0;
+        barra.enabled = false;
+        player.gameObject.GetComponent<Vida>().enabled = false;
 
         //esconder oq tava antes na telinha de game over
         gameOverScript.HideComponents();
