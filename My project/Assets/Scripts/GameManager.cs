@@ -50,7 +50,6 @@ public class GameManager : MonoBehaviour
             StartCoroutine(Morrer());
         }
         
-
     }
 
     private IEnumerator StartGame(){
@@ -92,7 +91,10 @@ public class GameManager : MonoBehaviour
             morto = true;
         }
         //Checar morte por outros meios abaixo, se houver
-
+        if (player.gameObject.GetComponent<Vida>().vida <= 0 ){
+            Debug.Log("Jogador morto por ter sua vida anulada"); 
+            morto = true;
+        }
         return morto;
     }
 }

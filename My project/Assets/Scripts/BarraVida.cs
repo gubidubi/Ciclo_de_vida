@@ -6,14 +6,15 @@ public class BarraVida : MonoBehaviour
 {
     private float vida;
     public GameObject jogador;
-    public float vidaMax;
     private float yMax;
     public Vector3 scaleInicial;
+    private float vidaMax;
     // Start is called before the first frame update
     void Start()
     {
         yMax = scaleInicial.y;
         scaleInicial = new Vector3(scaleInicial.x, 0, scaleInicial.z);
+        vidaMax = jogador.GetComponent<Vida>().vidaMax;
     }
 
     // Update is called once per frame

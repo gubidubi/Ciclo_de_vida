@@ -6,6 +6,7 @@ public class Vida : MonoBehaviour
 {
     public bool luz = false;
     public float recuperacaoDeVida = 3;
+    public float vidaMax;
     public float dano = 1;
     public float vida = 100;
 
@@ -23,6 +24,7 @@ public class Vida : MonoBehaviour
         } else {
             vida -= dano * Time.deltaTime;
         }
-        Debug.Log(vida);
+        if (vida > vidaMax) vida = vidaMax;
+        if (vida < 0) vida = 0;
     }
 }
