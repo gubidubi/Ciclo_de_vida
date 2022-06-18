@@ -16,6 +16,9 @@ public class GameManager : MonoBehaviour
     public Animator textoInicial;
     [Space]
 
+    [Header("Spawners")]
+    public SpawnDeGalhos spawner;
+
     private bool comecou = false;
     private bool morreu = false;
 
@@ -55,6 +58,7 @@ public class GameManager : MonoBehaviour
         //Começar uma musiquinha tbm
 
         //Ativar o sistema de spawn de inimigos e de galhos
+        spawner.enabled = true;
 
         yield return new WaitForSeconds(0.5f);
         textoInicial.SetTrigger("sumir");
@@ -63,6 +67,8 @@ public class GameManager : MonoBehaviour
 
     private IEnumerator Morrer(){
         //Parar o spawn de inimigos
+        spawner.enabled = false;
+        //Parar o jogador
         player.forca = 0;
         //esconder oq tava antes
         gameOverScript.HideComponents();
