@@ -9,6 +9,7 @@ public class GameManager : MonoBehaviour
     public BarraVida barra;
     private float playerNormalSpeedAux;
     private float cameraNormalSpeedAux;
+    private float playerNormalTorqueAux;
     [Space]
 
     [Header("Game Over")]
@@ -31,8 +32,11 @@ public class GameManager : MonoBehaviour
         pontuacao = 0;
         playerNormalSpeedAux = player.forca;
         player.forca = 0;
+        playerNormalTorqueAux = player.torque;
+        player.torque = 0;
         cameraNormalSpeedAux = camera.velocidade;
         camera.velocidade = 0;
+
     }
 
     private void Update(){ //Inicialmente camera, cenario e arvore parados, até que o jogador pressione alguma tecla (usei a tecla E)
@@ -56,6 +60,7 @@ public class GameManager : MonoBehaviour
     private IEnumerator StartGame(){
         player.forca = playerNormalSpeedAux;
         camera.velocidade = cameraNormalSpeedAux;
+        player.torque = playerNormalTorqueAux;
         //Começar uma musiquinha tbm
 
         //Ativar os sistemas de spawn
@@ -77,6 +82,7 @@ public class GameManager : MonoBehaviour
         folhas.enabled = false;
         //Parar o jogador e sua vida
         player.forca = 0;
+        player.torque = 0;
         barra.enabled = false;
         player.gameObject.GetComponent<Vida>().enabled = false;
 
