@@ -28,7 +28,7 @@ public class SpawnDeGalhos : MonoBehaviour
         //escolher orientação
         float rotacao = Random.Range(0f, 360f);
         //escolher tamanho
-        float escala = Random.Range(1f, 3f);
+        float escala = Random.Range(1f, 2.4f);
         //Instanciar
         GameObject novo = Instantiate(galho, new Vector3(x,y,0), Quaternion.Euler(0,0,rotacao));
         novo.transform.localScale =  new Vector3(escala,escala,1);
