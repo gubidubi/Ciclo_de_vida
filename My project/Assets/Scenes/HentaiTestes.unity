@@ -627,7 +627,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 371660282}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a51791217f2b9cc439761c80a09156f0, type: 3}
   m_Name: 
@@ -704,7 +704,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 498463223}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a51791217f2b9cc439761c80a09156f0, type: 3}
   m_Name: 
@@ -1164,6 +1164,10 @@ MonoBehaviour:
   textoInicial: {fileID: 608924919}
   spawner: {fileID: 911579828}
   folhas: {fileID: 1272383556}
+  nuts: {fileID: 371660284}
+  abelhas: {fileID: 498463225}
+  borboletas: {fileID: 1714836518}
+  luzes: {fileID: 1097981392}
   pontuacao: 0
 --- !u!1 &905957190
 GameObject:
@@ -1528,7 +1532,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1097981390}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ac64d2814084c094dbc783f3694acb46, type: 3}
   m_Name: 
@@ -2047,7 +2051,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1714836516}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a51791217f2b9cc439761c80a09156f0, type: 3}
   m_Name: 

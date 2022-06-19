@@ -21,6 +21,10 @@ public class GameManager : MonoBehaviour
     [Header("Spawners")]
     public SpawnDeGalhos spawner;
     public SpawnDeFolhas folhas;
+    public SpawnDeFolhas nuts;
+    public SpawnDeFolhas abelhas;
+    public SpawnDeFolhas borboletas;
+    public SpawnDeLuz luzes;
 
     private bool comecou = false;
     private bool morreu = false;
@@ -66,6 +70,10 @@ public class GameManager : MonoBehaviour
         //Ativar os sistemas de spawn
         spawner.enabled = true;
         folhas.enabled = true;
+        nuts.enabled = true;
+        abelhas.enabled = true;
+        borboletas.enabled = true;
+        luzes.enabled = true;
 
         //Ja pode perder vida
         barra.enabled = true;
@@ -80,10 +88,16 @@ public class GameManager : MonoBehaviour
         //Parar os spawners
         spawner.enabled = false;
         folhas.enabled = false;
+        nuts.enabled = false;
+        abelhas.enabled = false;
+        borboletas.enabled = false;
+        luzes.enabled = false;
+
         //Parar o jogador e sua vida
         player.forca = 0;
         player.torque = 0;
         barra.enabled = false;
+        barra.gameObject.transform.localScale = new Vector3(barra.gameObject.transform.localScale.x, 0, barra.gameObject.transform.localScale.y);
         player.gameObject.GetComponent<Vida>().enabled = false;
 
         //esconder oq tava antes na telinha de game over
