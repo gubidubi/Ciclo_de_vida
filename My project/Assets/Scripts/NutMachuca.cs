@@ -5,7 +5,7 @@ using UnityEngine;
 public class NutMachuca : MonoBehaviour
 {
 
-    public GameObject game_managment;
+    public GameObject jogadorCol;
     private Vida vidaDoJogador;
     private Rigidbody2D corpo;
     
@@ -13,8 +13,9 @@ public class NutMachuca : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        vidaDoJogador = jogadorCol.GetComponent<Vida>();
         jogadorCol = GameObject.FindWithTag("Player"); 
+        vidaDoJogador = jogadorCol.GetComponent<Vida>();
+        
     }
 
     // Update is called once per frame
