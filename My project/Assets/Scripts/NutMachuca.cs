@@ -13,8 +13,9 @@ public class NutMachuca : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        vidaDoJogador = jogadorCol.GetComponent<Vida>();
         jogadorCol = GameObject.FindWithTag("Player"); 
+        vidaDoJogador = jogadorCol.GetComponent<Vida>();
+        
     }
 
     // Update is called once per frame
@@ -30,6 +31,6 @@ public class NutMachuca : MonoBehaviour
     private void OnCollisionEnter(Collision jogadorCol)
     {
       
-    //funcaodano
+       vidaDoJogador.Dano(20);
     }
 }
