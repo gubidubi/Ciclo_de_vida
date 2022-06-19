@@ -5,9 +5,9 @@ using UnityEngine;
 public class Vida : MonoBehaviour
 {
     public bool luz = false;
-    public float recuperacaoDeVida = 3;
+    public float recuperacaoDeVida;
     public float vidaMax;
-    public float dano = 1;
+    public float danops;
     public float vida = 100;
 
     // Start is called before the first frame update
@@ -22,7 +22,7 @@ public class Vida : MonoBehaviour
         if (luz) {
             vida += recuperacaoDeVida * Time.deltaTime;
         } else {
-            vida -= dano * Time.deltaTime;
+            vida -= danops * Time.deltaTime;
         }
         if (vida > vidaMax) vida = vidaMax;
         if (vida < 0) vida = 0;
