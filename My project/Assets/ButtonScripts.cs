@@ -1,18 +1,18 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class ButtonScripts : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
+    public void Continue(){
+        if (GameObject.Find("Game_Management").GetComponent<GameManager>().pontuacao > 100){
+            SceneManager.LoadScene("Transicao");
+        }
+        else{
+            SceneManager.LoadScene("Main");
+        }
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+    public void GiveUp(){
+        Application.Quit();
     }
 }

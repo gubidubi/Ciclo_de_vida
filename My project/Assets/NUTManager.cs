@@ -28,7 +28,7 @@ public class NUTManager : MonoBehaviour
             imagem.color += new Color(k,k,k,k);
             yield return new WaitForSeconds(0.1f);
         }
-        SceneManager.LoadScene(""); //CENA INICIAL
+        SceneManager.LoadScene("Main"); //CENA INICIAL
     }
 
     private IEnumerator Iniciar(){

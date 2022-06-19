@@ -43,6 +43,6 @@ public class Fim : MonoBehaviour
             imagem.color += new Color(3*k,3*k,3*k,3*k);
             yield return new WaitForSeconds(0.1f);
         }
-        SceneManager.LoadScene("");
+        SceneManager.LoadScene("Nut");
     }
 }
