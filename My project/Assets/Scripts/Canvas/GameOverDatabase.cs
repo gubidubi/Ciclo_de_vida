@@ -6,7 +6,7 @@ public class GameOverDatabase : MonoBehaviour
     public Sprite[] allImages;
     public string[] allRankTexts;
     public Color[] allRankColors;
-
+    public AudioSource[] allSounds;
     public string ChooseRandomMessage(){
         string chosen = allMessages[Random.Range(0,allMessages.Length)];
         return chosen;

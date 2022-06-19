@@ -64,21 +64,26 @@ public class GameOver : MonoBehaviour
         HideComponents();
         //Bring down the panel
         yield return new WaitForSeconds(1);
+        database.allSounds[0].Play();
         // 1 - mostrar pontuação - FEITO
         uselesPointtxt.enabled = true;
         uselesPointtxt.gameObject.GetComponent<Animator>().SetTrigger("cair");
         yield return new WaitForSeconds(1);
+        database.allSounds[0].Play();
         pontostxt.enabled = true;
         pontostxt.gameObject.GetComponent<Animator>().SetTrigger("cair");
         
         // 2 - mostrar rank
         yield return new WaitForSeconds(1);
+        database.allSounds[0].Play();
         uselessRanktxt.enabled = true;
         uselessRanktxt.gameObject.GetComponent<Animator>().SetTrigger("cair");
         yield return new WaitForSeconds(1.5f);
+        database.allSounds[0].Play();
         rank.enabled =  true;
         rank.gameObject.GetComponent<Animator>().SetTrigger("cair");
         yield return new WaitForSeconds(1);
+        database.allSounds[0].Play();
         // 3 - mostrar imagem
         imagem.enabled=true;
         imagem.gameObject.GetComponent<Animator>().SetTrigger("cair");
