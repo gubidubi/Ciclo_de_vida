@@ -632,7 +632,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a51791217f2b9cc439761c80a09156f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  folhaPequena: {fileID: 1897681683}
+  folhaPequena: {fileID: 8793345906138915247, guid: be17ca7c66a9458409e7b8d04829ebd8, type: 3}
   camera: {fileID: 2800849}
   SpawnTime: 0.1
 --- !u!1 &397544565 stripped
@@ -709,7 +709,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a51791217f2b9cc439761c80a09156f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  folhaPequena: {fileID: 3484270107742536581, guid: 2c85147d950ccae48a2d854562e72789, type: 3}
+  folhaPequena: {fileID: 3526114283842878690, guid: 2c85147d950ccae48a2d854562e72789, type: 3}
   camera: {fileID: 2800849}
   SpawnTime: 10
 --- !u!1 &564278220
@@ -1755,7 +1755,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a51791217f2b9cc439761c80a09156f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  folhaPequena: {fileID: 2210892623895996870, guid: e0282d71896069b4ab9a71a643508a92, type: 3}
+  folhaPequena: {fileID: 8752727223915776266, guid: e0282d71896069b4ab9a71a643508a92, type: 3}
   camera: {fileID: 2800849}
   SpawnTime: 2
 --- !u!1 &1472614700 stripped
@@ -1783,67 +1783,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!1001 &1535553298
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 8793345906138915232, guid: be17ca7c66a9458409e7b8d04829ebd8, type: 3}
-      propertyPath: m_RootOrder
-      value: 14
-      objectReference: {fileID: 0}
-    - target: {fileID: 8793345906138915232, guid: be17ca7c66a9458409e7b8d04829ebd8, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -3.99
-      objectReference: {fileID: 0}
-    - target: {fileID: 8793345906138915232, guid: be17ca7c66a9458409e7b8d04829ebd8, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -0.93
-      objectReference: {fileID: 0}
-    - target: {fileID: 8793345906138915232, guid: be17ca7c66a9458409e7b8d04829ebd8, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8793345906138915232, guid: be17ca7c66a9458409e7b8d04829ebd8, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8793345906138915232, guid: be17ca7c66a9458409e7b8d04829ebd8, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8793345906138915232, guid: be17ca7c66a9458409e7b8d04829ebd8, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8793345906138915232, guid: be17ca7c66a9458409e7b8d04829ebd8, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8793345906138915232, guid: be17ca7c66a9458409e7b8d04829ebd8, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8793345906138915232, guid: be17ca7c66a9458409e7b8d04829ebd8, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8793345906138915232, guid: be17ca7c66a9458409e7b8d04829ebd8, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8793345906138915245, guid: be17ca7c66a9458409e7b8d04829ebd8, type: 3}
-      propertyPath: jogadorCol
-      value: 
-      objectReference: {fileID: 564278220}
-    - target: {fileID: 8793345906138915247, guid: be17ca7c66a9458409e7b8d04829ebd8, type: 3}
-      propertyPath: m_Name
-      value: nut
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: be17ca7c66a9458409e7b8d04829ebd8, type: 3}
 --- !u!1 &1635202469
 GameObject:
   m_ObjectHideFlags: 0
@@ -2113,14 +2052,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a51791217f2b9cc439761c80a09156f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  folhaPequena: {fileID: 6296003981839427330, guid: b62f179343af8004eb0deccd82ab173b, type: 3}
+  folhaPequena: {fileID: 3526114283842878690, guid: 2c85147d950ccae48a2d854562e72789, type: 3}
   camera: {fileID: 2800849}
   SpawnTime: 20
---- !u!1 &1897681683 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8793345906138915247, guid: be17ca7c66a9458409e7b8d04829ebd8, type: 3}
-  m_PrefabInstance: {fileID: 1535553298}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1966424063 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3289626643785368722, guid: fc2b0d33afb4ebc41829e5c90d0890ca, type: 3}
