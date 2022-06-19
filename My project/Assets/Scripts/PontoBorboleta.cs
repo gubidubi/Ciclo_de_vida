@@ -25,6 +25,7 @@ public class PontoBorboleta : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D jogadorCol2)
     {
         if (jogadorCol2.gameObject == jogadorCol) {
+            GameObject.Find("AllSounds").GetComponent<SoundPlayer>().PlayBorboletaSound();
             script.pontuacao += pontos;
             Destroy(gameObject);
         }
