@@ -5,7 +5,7 @@ using UnityEngine;
 public class NutMachuca : MonoBehaviour
 {
 
-    public GameObject jogadorCol;
+    public GameObject game_managment;
     private Vida vidaDoJogador;
     private Rigidbody2D corpo;
     
@@ -30,6 +30,6 @@ public class NutMachuca : MonoBehaviour
     private void OnCollisionEnter(Collision jogadorCol)
     {
       
-    //funcaodano
+       vidaDoJogador.Dano(20);
     }
 }

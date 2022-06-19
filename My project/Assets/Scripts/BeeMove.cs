@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class BeeMove : MonoBehaviour
 {
+    
     private Rigidbody2D corpo;
     private GameObject player;
       private Vector2 target;
@@ -34,4 +35,6 @@ public class BeeMove : MonoBehaviour
             anim.SetBool("abelhaDireita",true);
         else anim.SetBool("abelhaDireita",false);
     }
+
+    
 }
