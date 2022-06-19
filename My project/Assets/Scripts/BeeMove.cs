@@ -8,22 +8,30 @@ public class BeeMove : MonoBehaviour
     private GameObject player;
       private Vector2 target;
     private Vector2 position;
-    public float speed = 10.0f;
+    public Animator anim ;
+
+    public float w;
+    public float R;
+    public float TETA0;
+    private float vx, vy;
     // Start is called before the first frame update
     void Start()
     {
         player = GameObject.FindWithTag("Player");
         corpo = gameObject.GetComponent<Rigidbody2D>();
 
-        target = new Vector2(0.0f, 0.0f);
-        position = gameObject.transform.position;
+        TETA0 = 0;
+        anim = gameObject.GetComponent<Animator>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        float step = speed * Time.deltaTime;
-        // move sprite towards the target location
-        transform.position = Vector2.MoveTowards(transform.position, target, step);
+        vy = w*R*Mathf.Cos(TETA0 + w*Time.time);
+        vx = w*R*Mathf.Sin(TETA0 + w*Time.time);
+        corpo.velocity = new Vector2(vx,vy);
+        if(vx > 0)
+            anim.SetBool("abelhaDireita",true);
+        else anim.SetBool("abelhaDireita",false);
     }
 }

@@ -5,7 +5,7 @@ using UnityEngine;
 public class NutMachuca : MonoBehaviour
 {
 
-    public GameObject jogador;
+    public GameObject jogadorCol;
     private Vida vidaDoJogador;
     private Rigidbody2D corpo;
     
@@ -13,7 +13,8 @@ public class NutMachuca : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        vidaDoJogador = jogador.GetComponent<Vida>();
+        vidaDoJogador = jogadorCol.GetComponent<Vida>();
+        jogadorCol = GameObject.FindWithTag("Player"); 
     }
 
     // Update is called once per frame
@@ -26,11 +27,9 @@ public class NutMachuca : MonoBehaviour
     /// touching another rigidbody/collider.
     /// </summary>
     /// <param name="other">The Collision data associated with this collision.</param>
-    private void OnCollisionEnter(Collision other)
+    private void OnCollisionEnter(Collision jogadorCol)
     {
-       /* if(other.gameObject.FindWithTag("Player"))
-        {
-
-        }*/
+      
+    //funcaodano
     }
 }
