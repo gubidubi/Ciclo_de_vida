@@ -99,15 +99,26 @@ public class GameManager : MonoBehaviour
 
     private bool ChecarMorte(){
         bool morto = false;
+
+        //checar porte pelas ordenadas
         if (Mathf.Abs(player.transform.position.y - camera.transform.position.y) >= 5){ //Jogador ta acima ou abaixo da camera
             Debug.Log("Jogador detectado fora dos limites. Morra imediatamente");
             morto = true;
         }
-        //Checar morte por outros meios abaixo, se houver
+
+        //Checar morte pelas abscissas
+        if (Mathf.Abs(player.transform.position.x - camera.transform.position.x) >= 9){
+            Debug.Log("Jogador detectado fora dos limites. Morra imediatamente");
+            morto = true;
+        }
+
+        //Checar morte por vida
         if (player.gameObject.GetComponent<Vida>().vida <= 0 ){
             Debug.Log("Jogador morto por ter sua vida anulada"); 
             morto = true;
         }
+
+        //Checar morte por outros meios, se houver
         return morto;
     }
 }

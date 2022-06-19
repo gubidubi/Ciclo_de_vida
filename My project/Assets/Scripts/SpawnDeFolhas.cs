@@ -23,7 +23,7 @@ public class SpawnDeFolhas : MonoBehaviour
     private void SpawnSingleFolha(){
         //escolher posição -> y acima de onde a camera ta vendo (cam position + 5 + ...)
         float y = Random.Range(camera.position.y + 5f, camera.position.y + 10f);
-        float x = Random.Range(-9f, 9f);
+        float x = Random.Range(-8.7f, 8.7f);
         GameObject novo = Instantiate(folhaPequena, new Vector3(x,y,0), Quaternion.identity);
         Destroy(novo,120); //Só pra n acumular muitas folhas
     }
