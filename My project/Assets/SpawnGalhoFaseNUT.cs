@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class SpawnDeGalhosFaseNUT : MonoBehaviour
+public class SpawnGalhoFaseNUT : MonoBehaviour
 {
     public GameObject galho; //prefab
     public Transform camera;
