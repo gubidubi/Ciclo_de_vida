@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - Parede
+  - Music
   layers:
   - Default
   - TransparentFX
