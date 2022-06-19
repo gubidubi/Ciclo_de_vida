@@ -17,7 +17,7 @@ public class Luz : MonoBehaviour
     void Update()
     {
         if (cameraPrincipal.transform.position.y - transform.position.y > 24) {
-            transform.position = transform.position + (Vector3.up * (44 + Random.Range(0, 10)));
+            transform.position = transform.position + (Vector3.up * (43 + Random.Range(0, 5)));
         }
     }
     

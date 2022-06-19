@@ -323,6 +323,53 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &33299167
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 33299168}
+  - component: {fileID: 33299169}
+  m_Layer: 0
+  m_Name: SpawnDeAbelhas
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &33299168
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 33299167}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 4.914852, y: 1.8506699, z: -0.04252054}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1038848210}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &33299169
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 33299167}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a51791217f2b9cc439761c80a09156f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  folhaPequena: {fileID: 2210892623895996870, guid: e0282d71896069b4ab9a71a643508a92, type: 3}
+  camera: {fileID: 2800849}
+  SpawnTime: 2
 --- !u!1 &102731117
 GameObject:
   m_ObjectHideFlags: 1
@@ -1342,6 +1389,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   jogador: {fileID: 564278220}
   scaleInicial: {x: 0.95, y: 0.99, z: 1}
+  scaleBase: {x: 0, y: 0, z: 0}
 --- !u!212 &905957193
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1611,6 +1659,7 @@ Transform:
   m_Children:
   - {fileID: 911579827}
   - {fileID: 1272383555}
+  - {fileID: 33299168}
   m_Father: {fileID: 0}
   m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
