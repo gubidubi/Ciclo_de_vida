@@ -588,6 +588,53 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!1 &371660282
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 371660283}
+  - component: {fileID: 371660284}
+  m_Layer: 0
+  m_Name: SpawnDeNut
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &371660283
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 371660282}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 4.914852, y: 1.8506699, z: -0.04252054}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1038848210}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &371660284
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 371660282}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a51791217f2b9cc439761c80a09156f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  folhaPequena: {fileID: 8793345906138915247, guid: be17ca7c66a9458409e7b8d04829ebd8, type: 3}
+  camera: {fileID: 2800849}
+  SpawnTime: 10
 --- !u!1 &397544565 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7002591496327743715, guid: fc2b0d33afb4ebc41829e5c90d0890ca, type: 3}
@@ -618,6 +665,53 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 9085889889186611873, guid: fc2b0d33afb4ebc41829e5c90d0890ca, type: 3}
   m_PrefabInstance: {fileID: 9085889889621464672}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &498463223
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 498463224}
+  - component: {fileID: 498463225}
+  m_Layer: 0
+  m_Name: SpawnDeAbelhas
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &498463224
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 498463223}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 4.914852, y: 1.8506699, z: -0.04252054}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1038848210}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &498463225
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 498463223}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a51791217f2b9cc439761c80a09156f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  folhaPequena: {fileID: 3526114283842878690, guid: 2c85147d950ccae48a2d854562e72789, type: 3}
+  camera: {fileID: 2800849}
+  SpawnTime: 12
 --- !u!1 &564278220
 GameObject:
   m_ObjectHideFlags: 0
@@ -698,7 +792,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 20
   m_LinearDrag: 5
   m_AngularDrag: 5
   m_GravityScale: 0
@@ -771,8 +865,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f9a3da85a8c306419249334ed21c5cc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  forca: 400
-  torque: 50
+  forca: 8000
+  torque: 1000
 --- !u!4 &564278225
 Transform:
   m_ObjectHideFlags: 0
@@ -804,7 +898,7 @@ MonoBehaviour:
   luz: 0
   recuperacaoDeVida: 6
   vidaMax: 100
-  dano: 3
+  danops: 4
   vida: 100
 --- !u!1 &603066144 stripped
 GameObject:
@@ -1070,6 +1164,10 @@ MonoBehaviour:
   textoInicial: {fileID: 608924919}
   spawner: {fileID: 911579828}
   folhas: {fileID: 1272383556}
+  nuts: {fileID: 371660284}
+  abelhas: {fileID: 498463225}
+  borboletas: {fileID: 1714836518}
+  luzes: {fileID: 1097981392}
   pontuacao: 0
 --- !u!1 &905957190
 GameObject:
@@ -1382,15 +1480,66 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1038848209}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.8847206, y: -0.31096345, z: 0.0067845834}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 911579827}
   - {fileID: 1272383555}
+  - {fileID: 371660283}
+  - {fileID: 498463224}
+  - {fileID: 1714836517}
+  - {fileID: 1097981391}
   m_Father: {fileID: 0}
   m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1097981390
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1097981391}
+  - component: {fileID: 1097981392}
+  m_Layer: 0
+  m_Name: SpawnDeLuz
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1097981391
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1097981390}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 4.914852, y: 1.8506699, z: -0.04252054}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1038848210}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1097981392
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1097981390}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac64d2814084c094dbc783f3694acb46, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  luz: {fileID: 1205891822}
+  camera: {fileID: 2800849}
+  SpawnTime: 15
 --- !u!1 &1205891822
 GameObject:
   m_ObjectHideFlags: 0
@@ -1558,14 +1707,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1205891822}
-  m_LocalRotation: {x: 0, y: 0, z: 0.5, w: 0.8660254}
-  m_LocalPosition: {x: -1, y: 10, z: 0.055233162}
+  m_LocalRotation: {x: 0, y: 0, z: 0.3420201, w: 0.9396927}
+  m_LocalPosition: {x: -1, y: 5, z: 0.055233162}
   m_LocalScale: {x: 5, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 13
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 60}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 40}
 --- !u!1 &1272383554
 GameObject:
   m_ObjectHideFlags: 0
@@ -1610,7 +1759,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a51791217f2b9cc439761c80a09156f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  folhaPequena: {fileID: 2210892623895996870, guid: e0282d71896069b4ab9a71a643508a92, type: 3}
+  folhaPequena: {fileID: 8752727223915776266, guid: e0282d71896069b4ab9a71a643508a92, type: 3}
   camera: {fileID: 2800849}
   SpawnTime: 2
 --- !u!1 &1472614700 stripped
@@ -1863,6 +2012,53 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1714836516
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1714836517}
+  - component: {fileID: 1714836518}
+  m_Layer: 0
+  m_Name: SpawnDeBorboleta
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1714836517
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1714836516}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 4.914852, y: 1.8506699, z: -0.04252054}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1038848210}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1714836518
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1714836516}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a51791217f2b9cc439761c80a09156f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  folhaPequena: {fileID: 990238727517536267, guid: b62f179343af8004eb0deccd82ab173b, type: 3}
+  camera: {fileID: 2800849}
+  SpawnTime: 25
 --- !u!1 &1966424063 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3289626643785368722, guid: fc2b0d33afb4ebc41829e5c90d0890ca, type: 3}
