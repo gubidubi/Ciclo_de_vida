@@ -4,12 +4,11 @@ using UnityEngine;
 
 public class BorboletaMov : MonoBehaviour
 {
-    private GameObject obj;
+    private GameObject jogadorCol;
     private Rigidbody2D corpo;
     private Vector2 target;
     public float speed = 5f;
     float step;
-    bool tempoPassou = true;
     public Animator anim ;
 
     // Start is called before the first frame update
@@ -19,6 +18,7 @@ public class BorboletaMov : MonoBehaviour
         corpo = gameObject.GetComponent<Rigidbody2D>();
         target = transform.position;
         StartCoroutine("movAleatoria");
+        jogadorCol = GameObject.FindWithTag("Player");
 
     }
     
